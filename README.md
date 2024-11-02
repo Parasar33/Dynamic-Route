@@ -51,7 +51,7 @@ The Dynamic Route Finder effectively balances exploration and accuracy, showcasi
 
 Example of route visualization:
 
-![Route Visualization](images/route_visualization.png)
+![Route Visualization](dynamic_route.png)
 
 ## Future Improvements
 - **Adaptive Parameters**: Implement methods for dynamic parameter adjustment based on environment complexity.
