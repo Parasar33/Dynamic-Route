@@ -10,31 +10,62 @@ This project implements a dynamic route-finding tool built with Java Swing. It l
 - [Usage](#usage)
 - [Results](#results)
 - [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
 The Dynamic Route Finder is designed for real-time pathfinding solutions. By combining Genetic Algorithms with A* Search, the system offers both exploration capabilities and precision in finding optimized paths, making it adaptable for different scenarios.
 
 ## Features
-- **Optimized Pathfinding**: Uses Genetic Algorithm and A* to generate dynamic and efficient routes.
-- **Graphical User Interface**: Built with Swing for an interactive user experience.
-- **Customizable Parameters**: Allows users to adjust parameters for the Genetic Algorithm and A* Search.
+- **Hybrid Optimization Algorithm**: 
+  - Genetic Algorithm for global route exploration
+  - A* Search for precise path refinement
+- **Advanced Pathfinding Techniques**:
+  - Multi-objective fitness evaluation
+  - Adaptive route generation
+- **Flexible User Interface**:
+  - Interactive environment configuration
+  - Real-time route visualization
+  - Customizable algorithmic parameters
 
 ## Technologies Used
-- **Java**: Main programming language used for development.
-- **Swing**: For creating the graphical user interface.
-- **Java Collections Framework**: For managing data structures.
+- **Language**: Java 11+ 
+- **UI Framework**: Java Swing
+- **Build Tool**: Maven/Gradle
+- **Testing**: JUnit 5
 
 ## Algorithm Details
-1. **Genetic Algorithm Optimization**:
-   - **Initial Population**: Generates a random set of potential routes.
-   - **Selection**: Uses a fitness function to evaluate and select routes based on distance and obstacles.
-   - **Crossover & Mutation**: Combines routes to explore new paths and introduces variability.
-   - **Fitness Evaluation**: Assesses each route's effectiveness in reaching the destination.
 
-2. **A* Search Enhancement**:
-   - **Heuristic Function**: Utilizes a heuristic to guide the search efficiently toward the goal.
-   - **Path Refinement**: A* enhances the best candidates from the Genetic Algorithm for optimal path selection.
+### Genetic Algorithm Process
+1. **Population Initialization**
+   - Generate diverse initial route candidates
+   - Use randomized seeding strategies
+
+2. **Fitness Evaluation**
+   - Distance minimization
+   - Obstacle avoidance scoring
+   - Multi-criteria optimization
+
+3. **Selection Mechanisms**
+   - Tournament selection
+   - Rank-based probability distribution
+
+4. **Genetic Operators**
+   - Crossover: Route segment exchange
+   - Mutation: Random path perturbation
+
+### A* Search Enhancement
+- Admissible heuristic function
+- Dynamic path cost recalculation
+- Optimal path refinement
+
+## Installation
+```bash
+git clone https://github.com/Parasar33/Dynamic-Route.git
+cd Dynamic-Route
+mvn clean install
+java -jar target/route-finder.jar
+```
 
 ## Usage
 1. **Launch the Application**: Compile and run the Java application.
@@ -57,6 +88,12 @@ Example of route visualization:
 - **Adaptive Parameters**: Implement methods for dynamic parameter adjustment based on environment complexity.
 - **Real-World Data Testing**: Evaluate the algorithm on real-world maps or GPS data.
 - **Improved GUI Features**: Enhance the user interface for better interaction and visualization.
+
+## Contributing
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push and submit pull request
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
